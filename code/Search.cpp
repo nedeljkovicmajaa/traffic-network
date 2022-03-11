@@ -396,16 +396,6 @@ struct information Search::timeOfWaiting(vector<Line*>& lines, int station1, int
 					time_of_waiting += 24*60;
 				}
 			}
-
-			if (first_time == 0) {
-				min_time_of_waiting = time_of_waiting;
-				line_name = line->getLineMark();
-				first_time = 1;
-			}
-			else if (time_of_waiting < min_time_of_waiting) {
-				min_time_of_waiting = time_of_waiting;
-				line_name = line->getLineMark();
-			}
 		}
 	}
 	result.line = line_name;
